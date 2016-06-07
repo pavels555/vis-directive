@@ -11,24 +11,23 @@
 
         var directive = {
             bindToController: true,
-            controller: 'VisitController',
-            controllerAs: 'ctrl',
+            controller: 'VisitController as ctrl',
             link: link,
             restrict: 'A',
             scope: {
                 visit: '='
             },
-            template: '<div>{{ctrl.visit.title}}</div>'
+            templateUrl: '/item/item.html'
         };
         return directive;
 
-        function link(scope, element, attrs) {
+        function link(scope, element, attrs, ctrl) {
             
         }
     }
 
     VisitController.$inject = [];
     function VisitController() {
-
+        var ctrl = this;
     }
 })();

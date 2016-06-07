@@ -1,39 +1,44 @@
+<!DOCTYPE html>
 <html dir="rtl" lang="en" ng-app="app">
 
 <head>
+    <title>Demo vis</title>
+
     <!-- Angular Material style sheet -->
     <link href="app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc4/angular-material.css">
-
-<link href="vis/vis.css" rel="stylesheet" type="text/css" />
-    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css">
+    <link href="vis/vis.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body layout="column" ng-controller="AppCtrl as ctrl">
-    
+
     <div id="visualization"></div>
-    
-    <input type="text" name="state" ng-model="ctrl.states[0].name">    
+
+    <input type="text" name="state" ng-model="ctrl.states[0].name">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
 
     <!-- Angular.js Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-aria.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-messages.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.6/angular-locale_he.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.6/angular-locale_he.js "></script>
+
     <!-- Angular Material Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc4/angular-material.js"></script>
-    
+
     <!-- Vis Library -->
-    <script src="vis/vis.js"></script>
-    
+    <script src="vis/vis.js "></script>
+
     <!-- Moment Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment-with-locales.js"></script>
-    
+
     <script src="app.js"></script>
-    <script src="group.drv.js"></script>
-    <script src="item.drv.js"></script>
+    <script src="group/group.drv.js"></script>
+    <script src="item/item.drv.js"></script>
 </body>
 
 </html>

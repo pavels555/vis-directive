@@ -3,23 +3,21 @@
 
     angular
         .module('app')
-        .directive('group', group)
+        .directive('state', state)
         .controller('GroupController', GroupController);
 
-    group.$inject = [];
-    function group() {
+    state.$inject = [];
+    function state() {
 
         var directive = {
             bindToController: true,
-            // controller: 'GroupController',
-            // controllerAs: 'ctrl2',
+            controller: 'GroupController as ctrl',
             link: link,
-            restrict: 'E',
-            scope: false,
-            // scope: {
-            //     state: '='
-            // },
-            template: '<div>{{ctrl.state.name}}</div>'
+            restrict: 'A',
+            scope: {
+                state: '='
+            },
+            templateUrl: '/group/group.html'
         };
         return directive;
 
